@@ -54,8 +54,8 @@ color: #00234A;
 }
 
 .cardC{
-    width: 456px;
-    height: 141px;
+    width: 600px;
+    height: 214px;
     background: #FFFFFF;
     border: 5px solid #004FA8;
     border-radius: 10px;
@@ -81,6 +81,7 @@ color: #00234A;
     justify-content: space-around;
     align-items: center;
     padding: 8px;
+    height: 100%;
 }
 
 .cardCFlex p{
@@ -95,8 +96,8 @@ color: #00234A;
     align-items: center;
 }
 .tamañoDelivery{
-    width: 285px;
-    height: 285px;
+    width: 600px;
+    height: 600px;
 }
 
 .contenedor{
@@ -167,4 +168,67 @@ border-top-right-radius: 10px;
     color: #00234A;
     margin: 15px;
 
+}
+
+.tituloEditar{
+    font-family: 'BentonSans';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 32px;
+
+color: #00234A;
+
+}
+
+.botonGuardar{
+    width: 214px;
+    height: 58px;
+    background: #FFFFFF;
+    border: 5px solid #004FA8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoCentrar.espacio{
+    justify-content: space-around;
+}
+
+.inputText{
+width: 1027px;
+height: 50px;
+background: #FFFFFF;
+border: 1px solid #000000;
+}
+
+.textoCanvas.producto{
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.textoCategoriat{
+    font-family: 'BentonSans Comp Book';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 18px;
+display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+color: #00234A;
+}
+
+.textoCategoria.segundo{
+    margin: 9px;
+}
+
+.logoredondo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }

@@ -1,0 +1,130 @@
+.contenedor-motorista{
+    width: 400px;
+    height: 70px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fuente-motoristas{
+    font-family: 'BentonSans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: #00234A;
+
+}
+
+.grid-contenedor{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 100vh;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    place-content: center;
+    justify-items: center;
+    row-gap: 52px;
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 84vh;
+    column-gap: 52px;
+}
+
+html body{
+    display: block;
+}
+
+.botones-herramientas{   
+    width: 400px;
+    height: 70px;
+    background: #FFFFFF;
+    border: 10px solid #004FA8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.texto-botones-herramientas{
+    font-family: 'BentonSans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: #000000;
+
+}
+
+.texto-botones-herramientas.blanco{
+    color: #FFFFFF;
+} 
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex2{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+#asignando-Motorista{
+    margin: 32px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.contenedor-orden{
+    width: 600px;
+    height: 600px;
+    background: #FFFFFF;
+    border: 5px solid #004FA8;
+    border-radius: 10px;
+    
+}
+
+.textoRecibo{
+    font-family: 'BentonSans Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #00234A;
+}
+
+.texto-beetwen{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonAsignar{
+width: 176px;
+height: 38px;
+background: #004FA8;
+border-radius: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.textoCentrar.primero{
+    margin-top: 100px;
+}
+

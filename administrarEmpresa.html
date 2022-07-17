@@ -11,17 +11,19 @@
 </head>
 <body>
 
-    <nav id="navBar" class="flexNav">
-        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" class="navTexto">
-            <i class="fa-solid fa-arrow-left" style="color: grey; " ></i> 
-            <p style="margin-left: 50px; ">Aministrar Empresa</p>
-        </a>
+    
 
-        <p class="TituloNav">DNOW</p>
-        <img class="imgRedonda" src="img/user.webp" alt="">
-    </nav>
+    <section id="categorias" style="display:block;">
 
-    <section id="categorias" style="display: none;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarPaginaPrincipal()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="img/user.webp" alt="">
+        </nav>
 
         <div style="display: flex;justify-content: space-around;margin: 20px;">
             <div class="divBotones textoCentrar">
@@ -35,39 +37,39 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
                             <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
                             <p class="textoCategoria"> Hamburguesa</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
-                            <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                            <p class="textoCategoria"> Hamburguesa</p>
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
+                            <img class="imgCategoria" src="img/pizza.jpg" alt="">
+                            <p class="textoCategoria"> Pizzas</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
-                            <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                            <p class="textoCategoria"> Hamburguesa</p>
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
+                            <img class="imgCategoria" src="img/sushi.jpg" alt="">
+                            <p class="textoCategoria"> Sushi</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
-                            <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                            <p class="textoCategoria"> Hamburguesa</p>
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
+                            <img class="imgCategoria" src="img/bebidas.jpg" alt="">
+                            <p class="textoCategoria"> Bebidas</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
-                            <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                            <p class="textoCategoria"> Hamburguesa</p>
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
+                            <img class="imgCategoria" src="img/farmacia.jpg" alt="">
+                            <p class="textoCategoria"> Farmacia</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="cardCategoria" style="margin-bottom: 30px;">
-                            <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                            <p class="textoCategoria"> Hamburguesa</p>
+                        <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarEmpresas()">
+                            <img class="imgCategoria" src="img/Electronica.jpg" alt="">
+                            <p class="textoCategoria">Electronica</p>
                         </div>
                     </div>
                 
@@ -76,7 +78,18 @@
 
     </section>
     
-    <section id="Empresa" style="display: block;">
+    <section id="Empresa" style="display: none;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarCategorias()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="img/user.webp" alt="">
+        </nav>
+
+
         <div style="display: flex;justify-content: space-around;margin: 20px;">
             <div class="divBotones textoCentrar">
                 <p class="textoBotone">Agregar</p>
@@ -85,8 +98,8 @@
                 <p class="textoBotone">Editar</p>
             </div>
 
-            <div class="divBotones textoCentrar">
-                <p class="textoBotone">Productos</p>
+            <div class="divBotones textoCentrar" onclick="EditarProducto()">
+                <p class="textoBotone"  >Productos</p>
             </div>
         </div>
 
@@ -94,43 +107,118 @@
             <div class="row">
                 <div class="col-4">
                     <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
+                        <img class="imgCategoria" src="img/Bannaer/mcdonal.png" alt="">
+                        <div style="display: flex; align-items: center;">
+
+                            <img style="margin-left: 10px ;" class="logoredondo" src="img/logos/McDonalds-logo.png" alt="">
+                            <div>
+                                <p class="textoCategoria segundo">McDonald's</p>
+                                <p class="textoCategoriat"> Hamburgesas-Papas-Pollo Frito</p>
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
+                        <img class="imgCategoria" src="img/Bannaer/wendy.webp" alt="">
+                        <div style="display: flex; align-items: center;">
+
+                            <img style="margin-left: 10px ;" class="logoredondo" src="img/logos/wendys-logo-6.png" alt="">
+                            <div>
+                                <p class="textoCategoria segundo"> Wendy's</p>
+                                <p class="textoCategoriat"> Hamburgesas-Papas-Pollo Frito</p>
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
+                        <img class="imgCategoria" src="img/Bannaer/bigos.jpg" alt="">
+                        <div style="display: flex; align-items: center;">
+
+                            <img style="margin-left: 10px ;" class="logoredondo" src="img/logos/LOGO-BIGOS-REDNDO.png" alt="">
+                            <div>
+                                <p class="textoCategoria segundo"> Bigos</p>
+                                <p class="textoCategoriat"> Hamburgesas-Papas-Pollo Frito</p>
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
+                        <img class="imgCategoria" src="img/Bannaer/BurgerKing.webp" alt="">
+                        <div style="display: flex; align-items: center;">
+
+                            <img style="margin-left: 10px ;" class="logoredondo" src="img/logos/Logo-Burger-King.png" alt="">
+                            <div>
+                                <p class="textoCategoria segundo"> Burger King</p>
+                                <p class="textoCategoriat"> Hamburgesas-Papas-Pollo Frito</p>
+                            </div>
+
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="cardCategoria" style="margin-bottom: 30px;">
-                        <img class="imgCategoria" src="img/Hamburguesa.jpg" alt="">
-                        <p class="textoCategoria"> Hamburguesa</p>
-                    </div>
-                </div>
+                
             
             </div>
         </div>
+    </section>
+
+    <section id="EditarProducto" style="display: none ;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick=" mostrarEmpresas()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="img/user.webp" alt="">
+        </nav>
+
+        <div class="textoCentrar espacio" style="margin-top: 20px ;">
+            <p class="tituloEditar">Editar producto</p>
+            <div class="botonGuardar">
+                <p class="textoBotone">Guardar</p>
+            </div>
+        </div>
+        
+
+        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div>
+                <p class="textoCanvas producto">Nombre del producto</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+            <div>
+                <p class="textoCanvas producto">Insertar Imagen</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+            <div>
+                <p class="textoCanvas producto">Precio</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+
+            <div>
+                <p class="textoCanvas producto">Descripcion</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+
+            <div>
+                <p class="textoCanvas producto">Empresa</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+        </div>
+
     </section>
 
 

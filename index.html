@@ -14,12 +14,17 @@
         <p class="TituloNav">DNOW</p>
     </nav>
 
-    <form id="form" class="Centrar div2">
+    <form id="formularioInicioSesion" class="Centrar div2">
         <img src="img/FoodVector.png" alt="">
-        <div id="formularioInicio" class="CentrarBotones">
+        <div id="formularioInicio" class="CentrarBotonesInicio">
             <p class="TextoInicio"> Iniciar Sesión</p>
-            <input class="inputInicio" type="text" placeholder="Ingresa tu usuario">
-            <input class="inputInicio" type="password" name="" id="" placeholder="Ingresa tu contraseña">
+            <div class="flex centrar formularioGrupo" id="grupoUsuariorRegistrado">
+                <input type="text" class=" formulario_input" name="usuario" id="usuario" placeholder="Ingresa tu usuario">
+            </div>
+    
+            <div class="flex centrar formularioGrupo" id="grupoContraseñaRegistrada">
+                <input type="password" class=" formulario_input" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
             <!--recordatorio de cambiar a submit-->
             <button type="button" class="buttonInicio" onclick="enviarPaginaAdmin()">Iniciar Sesion</button>
         </div>
