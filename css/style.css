@@ -1,0 +1,93 @@
+body{
+    background-color: #00234A;
+    
+
+}
+
+#navBar{
+    background: #E6E6E6;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TituloNav{
+font-family: 'BentonSans';
+font-style: normal;
+font-weight: 700;
+font-size: 29px;
+line-height: 29px;
+text-align: center;
+color: #00234A;
+}
+
+.TextoInicio{
+    font-family: 'BentonSans';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 131.02%;
+text-align: center;
+
+color: #09051C;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+#formularioInicio{
+width: 319px;
+height: 553px;
+background: #FFFFFF;
+border-radius: 0px;
+}
+
+.Centrar{
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin: 0;
+}
+
+.div2{
+    flex: 1;
+}
+
+.inputInicio{
+    width: 288px;
+    height: 57px;
+    background: #E6E6E6;
+    border-radius: 15px;
+    border: 0;
+}
+
+.inputInicio:focus{
+    outline: none;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.buttonInicio{
+    width: 253px;
+    height: 57px;
+    background: #004FA8;
+    border-radius: 15px;
+    color: white;
+    border: 0;
+}
+
+#links a {
+    text-decoration: none;
+    
+}

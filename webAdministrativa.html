@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ddb99db5a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleadmin.css">
+    
+</head>
+<body>
+
+
+    <nav id="navBar" class="flexNav">
+        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-grip-lines" style="color: grey ;"></i>
+        </a>
+        <p class="TituloNav">DNOW</p>
+        <img class="imgRedonda" src="img/user.webp" alt="">
+    </nav>
+
+    <div class="contenedor">
+        <div class="conteinerC">
+            <div class="cardC">
+                <div class="cardCFlex">
+                    <div>
+                        <p class="tituloC">Administrar Categoria</p>
+                        <p class="textoCerrar c">Añade, edita, elimina categorias,
+                            empresas o productos</p>
+                    </div>
+                    <img  class="imgCard" src="img/Categoria.jpg" alt="">
+                </div>
+                
+            </div>
+            <div class="cardC">
+                <div class="cardCFlex">
+                    <div>
+                        <p class="tituloC">Administrar Motoristas</p>
+                        <p class="textoCerrar c">Aprueba nuevos motoristas</p>
+                    </div>
+                    <img  class="imgCard" src="img/Motorista.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="cardC">
+                <div class="cardCFlex">
+                    <div>
+                        <p class="tituloC">Administrar ordenes</p>
+                        <p class="textoCerrar c">Controla todas las ordenes 
+                            y que motoristas las realizan</p>
+                    </div>
+                    <img  class="imgCard" src="img/Orden.jpg" alt="">
+                </div>
+    
+            </div>
+            
+        </div>
+    
+        <div class="conteinerC">
+            <img class="tamañoDelivery"src="img/Delivery.png" alt="">
+        </div>
+
+    </div>
+
+    
+
+
+    <!--OffCanvas-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="links">
+                <div style="margin-bottom: 30px ;">
+                    <a class="textoCanvas" href="administrarEmpresa.html">Administrar Categoria</a>
+                </div>
+                <div style="margin-bottom: 30px ;">
+                    <a class="textoCanvas" href="#">Motoristas</a><br>
+                </div>
+                <div style="margin-bottom: 30px ;">
+                    <a class="textoCanvas" href="#">Ver ordenes disponibles</a>
+                </div>
+                
+                
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-evenly;">
+                <p class="textoCerrar">Cerrar Sesión</p>
+                <i class="fa-solid fa-door-open"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
