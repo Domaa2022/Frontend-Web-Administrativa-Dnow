@@ -1,0 +1,17 @@
+.topE{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+    color: #00234A;
+    font-family: "BentonSans Black";
+} .datos{
+    margin-left: 30px;
+    width:800px;
+    color:#00234A;
+    font-family: "BentonSans Black";
+} .datos input{
+    margin-left: 20px;
+    width: 700px;
+}
