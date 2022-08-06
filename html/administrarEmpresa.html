@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ddb99db5a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleadmin.css">
+</head>
+<body>
+
+    
+
+    <section id="categorias" style="display:block;">
+
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarPaginaPrincipal()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="../img/user.webp" alt="">
+        </nav>
+
+        <div style="display: flex;justify-content: space-around;margin: 20px;">
+            <div class="divBotones textoCentrar">
+                <p class="textoBotone">Agregar</p>
+            </div>
+            <div class="divBotones textoCentrar">
+                <p class="textoBotone">Editar</p>
+            </div>
+        </div>
+    
+            <div class="container">
+                <div class="row" id="containerCategorias">
+                    
+                
+                </div>
+            </div>
+
+    </section>
+    
+    <section id="Empresa" style="display: none;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarCategorias()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="../img/user.webp" alt="">
+        </nav>
+
+
+        <div style="display: flex;justify-content: space-around;margin: 20px;">
+            <div class="divBotones textoCentrar">
+                <p class="textoBotone">Agregar</p>
+            </div>
+            <div class="divBotones textoCentrar">
+                <p class="textoBotone">Editar</p>
+            </div>
+
+            <div class="divBotones textoCentrar" onclick="EditarProducto()">
+                <p class="textoBotone"  >Productos</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="containerProductos">
+                
+            
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="EditarProducto" style="display: none ;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick=" mostrarEmpresas()" ></i> 
+                <p style="margin-left: 50px; ">Aministrar Empresa</p>
+            </div>
+    
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="../img/user.webp" alt="">
+        </nav>
+
+        <div class="textoCentrar espacio" style="margin-top: 20px ;">
+            <p class="tituloEditar">Editar producto</p>
+            <div class="botonGuardar">
+                <p class="textoBotone">Guardar</p>
+            </div>
+        </div>
+        
+
+        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div>
+                <p class="textoCanvas producto">Nombre del producto</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+            <div>
+                <p class="textoCanvas producto">Insertar Imagen</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+            <div>
+                <p class="textoCanvas producto">Precio</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+
+            <div>
+                <p class="textoCanvas producto">Descripcion</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+
+
+            <div>
+                <p class="textoCanvas producto">Empresa</p>
+                <input class="inputText" type="text" name="" id="">
+            </div>
+        </div>
+
+    </section>
+
+
+        
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/controladorEmpresas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
