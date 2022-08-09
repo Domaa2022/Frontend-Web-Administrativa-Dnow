@@ -34,21 +34,20 @@ generarCategorias();
 
 
 function mostrarEmpresas(indiceCategoria){
-
-    
     axios({
         url: 'http://localhost:3000/categorias/' + indiceCategoria,
         method: 'get',
         ResponseType: 'json'
     }).then(res => {
         let x = res.data
+        sessionStorage.setItem('idCategoria', JSON.stringify(x))
         {document.getElementById('containerProductos').innerHTML = ''}
         
         for (let i = 0; i < x.empresas.length; i++) {
             document.getElementById('containerProductos').innerHTML +=
             `
             <div class="col-4">
-                <div class="cardCategoria" style="margin-bottom: 30px;">
+                <div class="cardCategoria" style="margin-bottom: 30px;" onclick="mostrarProductos('${indiceCategoria}',${i})">
                     <img class="imgCategoria" src="${x.empresas[i].banner}" alt="">
                     <div style="display: flex; align-items: center;">
 
@@ -70,18 +69,94 @@ function mostrarEmpresas(indiceCategoria){
     }).catch(err => {
         console.log(err)
     })
-
-    
-
-
     document.getElementById('Empresa').style.display = "block";
     document.getElementById('categorias').style.display = "none";
     document.getElementById('EditarProducto').style.display = "none";
 }
 
+function mostrarProductos(idCategoria,indiceEmpresa){
+    axios({
+        url : 'http://localhost:3000/categorias/' + idCategoria,
+        method : 'get',
+        ResponseType : 'json'
+    })
+    .then((res)=>{
+        let x = res.data.empresas[indiceEmpresa]
+        document.getElementById('Item').innerHTML = ''
+        for (let i = 0; i < x.productos.length; i++) {
+            document.getElementById('Item').innerHTML +=
+            `
+            <div class="col-4">
+                <div class="cardCategoria" style="margin-bottom: 30px;">
+                    <img class="imgCategoria" src="${x.productos[i].imagen}" alt="">
+                    <div style="display: flex; align-items: center;">
+
+                        
+                        <div>
+                            <p class="textoCategoria segundo">${x.productos[i].nombreProducto}</p>
+                            <p class="textoCategoriat"> $ ${x.productos[i].precio}</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            `
+        }
+        
+    })
+    .catch(err => {})
+
+
+
+
+    document.getElementById('productos').style.display = "block";
+    document.getElementById('Empresa').style.display = "none";
+    document.getElementById('categorias').style.display = "none";
+    document.getElementById('EditarProducto').style.display = "none";
+    document.getElementById('guardarProducto').style.display = 'none';
+    
+}
+
+
 
 function mostrarCategorias(){
+    document.getElementById('productos').style.display = "none";
     document.getElementById('Empresa').style.display = "none";
     document.getElementById('categorias').style.display = "block";
     document.getElementById('EditarProducto').style.display = "none";
+    document.getElementById('guardarProducto').style.display = 'none'
+}
+
+
+function volverEmpresas(){
+    document.getElementById('productos').style.display = "none";
+    document.getElementById('Empresa').style.display = "block";
+    document.getElementById('categorias').style.display = "none";
+    document.getElementById('EditarProducto').style.display = "none";
+    document.getElementById('guardarProducto').style.display = 'none'
+}
+
+function volverProductos(){
+    document.getElementById('productos').style.display = "block";
+    document.getElementById('Empresa').style.display = "none";
+    document.getElementById('categorias').style.display = "none";
+    document.getElementById('EditarProducto').style.display = "none";
+    document.getElementById('guardarProducto').style.display = 'none'
+}
+
+function editarProducto(){
+    document.getElementById('productos').style.display = "none";
+    document.getElementById('Empresa').style.display = "none";
+    document.getElementById('categorias').style.display = "none";
+    document.getElementById('EditarProducto').style.display = "block";
+    document.getElementById('guardarProducto').style.display = 'none'
+}
+
+function guardarProducto(){
+    document.getElementById('productos').style.display = "none";
+    document.getElementById('Empresa').style.display = "none";
+    document.getElementById('categorias').style.display = "none";
+    document.getElementById('EditarProducto').style.display = "none";
+    document.getElementById('guardarProducto').style.display = 'block'
 }

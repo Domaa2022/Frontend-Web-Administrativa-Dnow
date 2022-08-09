@@ -7,9 +7,9 @@
     <title>Editar</title>
     <script src="https://kit.fontawesome.com/d687448f8f.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleadmin.css">
-    <link rel="stylesheet" href="css/styleEmpresas.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleadmin.css">
+    <link rel="stylesheet" href="../css/styleEmpresas.css">
 
 </head>
 
@@ -22,46 +22,49 @@
         </div>
         
         <p class="TituloNav">DNOW</p>
-        <img class="imgRedonda" src="img/user.webp" alt="">
+        <img class="imgRedonda" src="../img/user.webp" alt="">
 
     </nav>
 
-   <center>
+    <center>
     <div class ="top">
         <p id="text">Editar</p>
         <center><div><input type="text" name="" id="">
-        <img src="img/buscar.png" alt="" srcset=""></div></center>
+        <img src="../img/buscar.png" alt="" srcset=""></div></center>
         <div class="divBotones textoCentrar">
-            <p class="textoBotone">Guardar</p>
+            <p style="margin-top: 0;" class="textoBotone">Guardar</p>
         </div>
     </div>
-   </center>
+    </center>
 
     <section>
         <center>
             <div class="tabla">
                 <div class="fila cabezal">
                     <div class="col"><p>ID</p></div>   
-                   <div class="col"><p>Logo</p></div> 
-                   <div class="col"><p>Nombre de la empresa</p></div> 
+                    <div class="col"><p>Logo</p></div> 
+                    <div class="col"><p>Nombre de la empresa</p></div> 
                     <div class="col"><p>Opciones</p></div>       
                 </div>
 
-                <div class="fila ">
+                <div id="empresaTabla">
+                    <div class="fila ">
+                        <div class="col">
+                            <p>1</p>
+                        </div>
+                        <div class="col"><img src="../img/Hamburguesas/wendy/wendys-logo-6.png" alt=""></div>
+    
+                        
+                        <div class="col">
+                            <p>Wendy`s</p>
+                        </div>
+    
                     <div class="col">
-                        <p>1</p>
-                    </div>
-                    <div class="col"><img src="img/Hamburguesa.jpg" alt=""></div>
-
+                        <img src="../img/editar.png" alt="" srcset="">
+                        <img src="../img/Borrar.png" alt="" srcset="">
                     
-                    <div class="col">
-                        <p>Wendy`s</p>
                     </div>
 
-                <div class="col">
-                    <img src="img/editar.png" alt="" srcset="">
-                    <img src="img/Borrar.png" alt="" srcset="">
-                   
                 </div>
                 
                 </div>
@@ -69,6 +72,10 @@
         </center>
     </section>
 
-    <script src="js/controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/controlador-editarEmpresas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

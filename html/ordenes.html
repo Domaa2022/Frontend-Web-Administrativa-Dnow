@@ -6,9 +6,9 @@
     <title>Ordenes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ddb99db5a0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleadmin.css">
-    <link rel="stylesheet" href="css/stylemotoristas.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleadmin.css">
+    <link rel="stylesheet" href="../css/stylemotoristas.css">
     
 </head>
 <body>
@@ -19,62 +19,25 @@
         </div>
 
         <p class="TituloNav">DNOW</p>
-        <img class="imgRedonda" src="img/user.webp" alt="">
+        <img class="imgRedonda" src="../img/user.webp" alt="">
     </nav>
 
     <section id="principal-motoristas">
         <div class="grid-contenedor">
-            <div class="grid">
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Orden #35</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Orden #56</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #66</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #82</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #45</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #25</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Orden #65</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #45</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #25</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Orden #65</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #45</p>
-                </div>
-                <div class="contenedor-motorista">
-                    <p class="fuente-motoristas">Ordenes #25</p>
-                </div>
-               
-             
-            
+            <div class="grid" id="ordenesDisponibles">
+                
+                
             </div>
             
-         
                 
         </div>
     </section>
 
 
 
-    <script src="js/controlador-motoristas.js"></script>
-    <script src="js/controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/controlador-motoristas.js"></script>
+    <script src="../js/controladorOrdenes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
