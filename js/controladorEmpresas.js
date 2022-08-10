@@ -71,7 +71,6 @@ function mostrarEmpresas(indiceCategoria){
     })
     document.getElementById('Empresa').style.display = "block";
     document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "none";
 }
 
 function mostrarProductos(idCategoria,indiceEmpresa){
@@ -82,6 +81,8 @@ function mostrarProductos(idCategoria,indiceEmpresa){
     })
     .then((res)=>{
         let x = res.data.empresas[indiceEmpresa]
+        sessionStorage.setItem('idProducto', JSON.stringify(x)) 
+        sessionStorage.setItem('id', indiceEmpresa)
         document.getElementById('Item').innerHTML = ''
         for (let i = 0; i < x.productos.length; i++) {
             document.getElementById('Item').innerHTML +=
@@ -113,8 +114,6 @@ function mostrarProductos(idCategoria,indiceEmpresa){
     document.getElementById('productos').style.display = "block";
     document.getElementById('Empresa').style.display = "none";
     document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "none";
-    document.getElementById('guardarProducto').style.display = 'none';
     
 }
 
@@ -124,8 +123,7 @@ function mostrarCategorias(){
     document.getElementById('productos').style.display = "none";
     document.getElementById('Empresa').style.display = "none";
     document.getElementById('categorias').style.display = "block";
-    document.getElementById('EditarProducto').style.display = "none";
-    document.getElementById('guardarProducto').style.display = 'none'
+
 }
 
 
@@ -133,30 +131,13 @@ function volverEmpresas(){
     document.getElementById('productos').style.display = "none";
     document.getElementById('Empresa').style.display = "block";
     document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "none";
-    document.getElementById('guardarProducto').style.display = 'none'
+
 }
 
 function volverProductos(){
     document.getElementById('productos').style.display = "block";
     document.getElementById('Empresa').style.display = "none";
     document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "none";
-    document.getElementById('guardarProducto').style.display = 'none'
+
 }
 
-function editarProducto(){
-    document.getElementById('productos').style.display = "none";
-    document.getElementById('Empresa').style.display = "none";
-    document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "block";
-    document.getElementById('guardarProducto').style.display = 'none'
-}
-
-function guardarProducto(){
-    document.getElementById('productos').style.display = "none";
-    document.getElementById('Empresa').style.display = "none";
-    document.getElementById('categorias').style.display = "none";
-    document.getElementById('EditarProducto').style.display = "none";
-    document.getElementById('guardarProducto').style.display = 'block'
-}

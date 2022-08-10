@@ -21,8 +21,8 @@ function llenarTabla(){
                         </div>
     
                     <div class="col">
-                        <img src="../img/editar.png" alt="" srcset="">
-                        <img src="../img/Borrar.png" alt="" srcset="">
+                        <img src="../img/editar.png" alt="" onclick= "moverEditar(${i})" srcset="">
+                        <img src="../img/Borrar.png" alt="" srcset="" onclick = eliminar(${i})>
                     
                     </div>
         `
@@ -34,3 +34,60 @@ function llenarTabla(){
     
 }
 llenarTabla();
+
+function moverEditar(indiceEmpresa){
+    document.getElementById('editarPrincipal').style.display = 'none';
+    document.getElementById('editarEmpresa').style.display = 'block';
+    axios({
+        url : 'http://localhost:3000/categorias/' + categoria._id,
+        method : 'GET',
+        ResponseType : 'json'
+    }).then(res =>{
+        var x = res.data.empresas[indiceEmpresa].nombreEmpresa;
+        const form = document.querySelector('#form-editEmpresa');
+        // Evento submit del formulario
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        axios({
+            method: 'put',
+            url: 'http://localhost:3000/categorias/' + categoria._id +'/'+ x,
+            data: formData,
+            ResponseType: 'json'
+        }).then(res => {
+            console.log(res.data)
+        }
+        ).catch(err => {
+            console.log(err)
+        }
+        )
+        })
+
+    })
+    
+    
+}
+
+function eliminar(indiceEmpresa){
+    axios({
+        url : 'http://localhost:3000/categorias/' + categoria._id +'/'+ indiceEmpresa,
+        method : 'delete',
+        ResponseType : 'json'
+    }).then(res =>{
+        console.log(res.data)
+        llenarTabla();
+    }).catch(err =>{
+        console.log(err);
+    }
+    )
+}
+
+function mostrarEditarPrincipal(){
+    document.getElementById('editarPrincipal').style.display = 'block';
+    document.getElementById('editarEmpresa').style.display = 'none';
+    llenarTabla()
+}
+
+function mostrarPaginaPrincipal(){
+    window.location.href = '../html/administrarEmpresa.html'
+}

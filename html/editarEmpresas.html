@@ -14,62 +14,109 @@
 </head>
 
 <body>
-    <nav id="navBar" class="flexNav">
-        <div class="textoCentrar">
-            <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarPaginaPrincipal()" ></i> 
-            <p style="margin-left: 50px; ">Administrar empresas</p>
 
-        </div>
-        
-        <p class="TituloNav">DNOW</p>
-        <img class="imgRedonda" src="../img/user.webp" alt="">
-
-    </nav>
-
-    <center>
-    <div class ="top">
-        <p id="text">Editar</p>
-        <center><div><input type="text" name="" id="">
-        <img src="../img/buscar.png" alt="" srcset=""></div></center>
-        <div class="divBotones textoCentrar">
-            <p style="margin-top: 0;" class="textoBotone">Guardar</p>
-        </div>
-    </div>
-    </center>
-
-    <section>
+    <section id="editarPrincipal" style="display: block ">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarPaginaPrincipal()" ></i> 
+                <p style="margin-left: 50px; ">Administrar empresas</p>
+    
+            </div>
+            
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="../img/user.webp" alt="">
+    
+        </nav>
+    
         <center>
-            <div class="tabla">
-                <div class="fila cabezal">
-                    <div class="col"><p>ID</p></div>   
-                    <div class="col"><p>Logo</p></div> 
-                    <div class="col"><p>Nombre de la empresa</p></div> 
-                    <div class="col"><p>Opciones</p></div>       
-                </div>
-
-                <div id="empresaTabla">
-                    <div class="fila ">
-                        <div class="col">
-                            <p>1</p>
-                        </div>
-                        <div class="col"><img src="../img/Hamburguesas/wendy/wendys-logo-6.png" alt=""></div>
+        <div class ="top">
+            <p id="text">Editar</p>
+            <center><div><input type="text" name="" id="">
+            <img src="../img/buscar.png" alt="" srcset=""></div></center>
+        </div>
+        </center>
     
-                        
-                        <div class="col">
-                            <p>Wendy`s</p>
-                        </div>
+        <section>
+            <center>
+                <div class="tabla">
+                    <div class="fila" style="background-color:#004Fa8 ;">
+                        <div class="col"><p>ID</p></div>   
+                        <div class="col"><p>Logo</p></div> 
+                        <div class="col"><p>Nombre de la empresa</p></div> 
+                        <div class="col" ><p>Opciones</p></div>       
+                    </div>
     
-                    <div class="col">
-                        <img src="../img/editar.png" alt="" srcset="">
-                        <img src="../img/Borrar.png" alt="" srcset="">
+                    <div id="empresaTabla">
+    
+    
+                    </div>
                     
                     </div>
+                </div>
+            </center>
+        </section>
 
-                </div>
-                
-                </div>
+    </section>
+    
+    
+    <section id="editarEmpresa" style="display: none;">
+        <nav id="navBar" class="flexNav">
+            <div class="textoCentrar">
+                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick="mostrarEditarPrincipal()" ></i> 
+                <p style="margin-left: 50px; ">Administrar Empresas</p>
+    
             </div>
-        </center>
+            
+            <p class="TituloNav">DNOW</p>
+            <img class="imgRedonda" src="img/user.webp" alt="">
+    
+        </nav>
+    
+        <section id="EditarProducto" >
+    
+            <div class="textoCentrar espacio" style="margin-top: 20px ;">
+                <p class="tituloEditar">Editar Empresa</p>
+                <div class="botonGuardar" style="border-color: white;">
+                    
+                </div>                          
+            </div>
+            
+    
+            <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                    
+                
+                
+                    <form id="form-editEmpresa">
+                        <div>
+                            <p class="textoCanvas producto">Nombre de empresa</p>
+                            <input class="inputText" type="text" name="nombreEmpresa" id="nombreEmpresa">
+                        </div>
+            
+                        <div>
+                            <p class="textoCanvas producto">Insertar Logo</p>
+                            <input  type="file" name="imagen" id="imagenEmp">
+                        </div>
+                        <div>
+                            <p class="textoCanvas producto">Insertar Banner</p>
+                            <input  type="file" name="imagen2" id="imagenEmp">
+                        </div>
+            
+                        <div>
+                            <p class="textoCanvas producto">Descripcion</p>
+                            <input class="inputText" type="text" name="Descripcion" id="descripcionEmpresa">
+                        </div>
+    
+                        <button class="botonGuardar" type="submit" style="margin-top: 40px ;">
+                            <p style="margin-top: 0" class="textoBotone">Guardar</p>
+                        </button> 
+                    </form>
+                    
+    
+                
+            </div>
+    
+        </section>
+
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -88,12 +88,17 @@
         </nav>
 
         <div style="display: flex;justify-content: space-around;margin: 20px;">
-            <div class="divBotones textoCentrar" onclick="guardarProducto()">
-                <p class="textoBotone">Agregar</p>
-            </div>
-            <div class="divBotones textoCentrar" onclick="editarProducto()">
-                <p class="textoBotone" >Editar</p>
-            </div>
+            <a href="/html/agregarProducto.html">
+                <div class="divBotones textoCentrar" >
+                    <p class="textoBotone">Agregar</p>
+                </div>
+            </a>
+            <a href="/html/editarProducto.html">
+                <div class="divBotones textoCentrar">
+                    <p class="textoBotone" >Editar</p>
+                </div>
+            </a>
+            
         </div>
     
             <div class="container">
@@ -104,106 +109,7 @@
             </div>
     </section>
 
-    <section id="EditarProducto" style="display:none ;">
-        <nav id="navBar" class="flexNav">
-            <div class="textoCentrar">
-                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick=" volverProductos()" ></i> 
-                <p style="margin-left: 50px; ">Aministrar Empresa</p>
-            </div>
     
-            <p class="TituloNav">DNOW</p>
-            <img class="imgRedonda" src="../img/user.webp" alt="">
-        </nav>
-
-        <div class="textoCentrar espacio" style="margin-top: 20px ;">
-            <p class="tituloEditar">Editar producto</p>
-            <div class="botonGuardar">
-                <p class="textoBotone">Guardar</p>
-            </div>
-        </div>
-        
-
-        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
-            <div>
-                <p class="textoCanvas producto">Nombre del producto</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-            <div>
-                <p class="textoCanvas producto">Insertar Imagen</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-            <div>
-                <p class="textoCanvas producto">Precio</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-
-            <div>
-                <p class="textoCanvas producto">Descripcion</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-
-            <div>
-                <p class="textoCanvas producto">Empresa</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-        </div>
-
-    </section>
-
-    <section id="guardarProducto" style="display:none ;">
-        <nav id="navBar" class="flexNav">
-            <div class="textoCentrar">
-                <i class="fa-solid fa-arrow-left" style="color: grey; " onclick=" volverProductos()" ></i> 
-                <p style="margin-left: 50px; ">Aministrar Empresa</p>
-            </div>
-    
-            <p class="TituloNav">DNOW</p>
-            <img class="imgRedonda" src="../img/user.webp" alt="">
-        </nav>
-
-        <div class="textoCentrar espacio" style="margin-top: 20px ;">
-            <p class="tituloEditar">Guardar producto</p>
-            <div class="botonGuardar">
-                <p class="textoBotone">Guardar</p>
-            </div>
-        </div>
-        
-
-        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
-            <div>
-                <p class="textoCanvas producto">Nombre del producto</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-            <div>
-                <p class="textoCanvas producto">Insertar Imagen</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-            <div>
-                <p class="textoCanvas producto">Precio</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-
-            <div>
-                <p class="textoCanvas producto">Descripcion</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-
-
-            <div>
-                <p class="textoCanvas producto">Empresa</p>
-                <input class="inputText" type="text" name="" id="">
-            </div>
-        </div>
-
-    </section>
-
 
         
     
