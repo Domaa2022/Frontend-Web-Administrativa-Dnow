@@ -10,7 +10,7 @@ form.addEventListener('submit', e => {
     const formData = new FormData(e.currentTarget);
     axios({
         method: 'POST',
-        url: 'http://localhost:3000/categorias/' +categoria._id + '/productos/' + idEmpresa,
+        url: 'http://localhost:3000/administradores/' +categoria._id + '/productos/' + idEmpresa,
         data: formData
     }).then(res => {
         console.log(res.data)

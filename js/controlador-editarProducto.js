@@ -57,7 +57,7 @@ function moverEditar(i){
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
     axios ({
-        url : 'http://localhost:3000/categorias/' + idCategoria._id + '/' + indiceEmpresa + '/' + i,
+        url : 'http://localhost:3000/administradores/' + idCategoria._id + '/' + indiceEmpresa + '/' + i,
         method : 'put',
         data : formData,
         ResponseType : 'json'
@@ -75,7 +75,7 @@ function moverEditar(i){
 
 function eliminar(indiceProducto){
     axios({
-        url : 'http://localhost:3000/categorias/' + idCategoria._id + '/' + indiceEmpresa + '/' + indiceProducto,
+        url : 'http://localhost:3000/administradores/' + idCategoria._id + '/' + indiceEmpresa + '/' + indiceProducto,
         method : 'DELETE',
         ResponseType : 'json'
     }).then(res =>{
