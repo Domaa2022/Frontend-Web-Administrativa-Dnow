@@ -30,3 +30,7 @@ function mostrarOrdenes () {
 }
 
 mostrarOrdenes();
+
+function seleccionarMotorista(){
+    location.href="../html/administrarMotoristas.html"
+}

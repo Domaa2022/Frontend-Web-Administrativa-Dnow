@@ -1,15 +1,6 @@
-
-function mostrarAsignacion() {
-    document.getElementById('contenedor-asignacion').style.display = "block";
-}
-
-function quitarAsignacion() {
-    document.getElementById('contenedor-asignacion').style.display = "none";
-}
-
 idMotorista = JSON.parse(sessionStorage.getItem('idMotorista'))
 
-function llenarLista(){
+function llenarTabla(){
 
     axios({
         url : 'http://localhost:3000/motoristas/' + idMotorista._id,
@@ -46,7 +37,17 @@ function llenarLista(){
     
 }
 
-llenarLista();
+llenarTabla();
 
-
-
+function eliminar(idMotorista){
+    axios({
+        url : 'http://localhost:3000/motoristas/' + idMotorista._id,
+        method : 'DELETE',
+        ResponseType : 'json'
+    }).then(res =>{
+        llenarTabla();
+    }).catch(err =>{
+        console.log(err);
+    }
+    )
+}

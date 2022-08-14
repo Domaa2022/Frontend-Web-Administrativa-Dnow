@@ -22,7 +22,7 @@
         </div>
         
         <p class="TituloNav">DNOW</p>
-        <img class="imgRedonda" src="img/user.webp" alt="">
+        <img class="imgRedonda" src="../img/user.webp" alt="">
 
     </nav>
 
@@ -30,7 +30,7 @@
     <div class ="top">
         <p id="text">Editar</p>
         <center><div><input type="text" name="" id="">
-        <img src="img/buscar.png" alt="" srcset=""></div></center>
+        <img src="../img/buscar.png" alt="" srcset=""></div></center>
         <div class="divBotones textoCentrar">
             <p class="textoBotone">Guardar</p>
         </div>
@@ -39,14 +39,14 @@
 
     <section>
         <center>
-            <div class="tabla">
+            <div class="tabla" id="motoristasTabla">
                 <div class="filaM cabezal">
                     <div class="col"><p>ID</p></div>   
                    <div class="col"><p>Nombre del motorista</p></div> 
                     <div class="col"><p>Opciones</p></div>       
                 </div>
 
-                <div class="filaM ">
+                <div class="filaM">
                     <div class="col">
                         <p>1</p>
                     </div>
@@ -57,26 +57,12 @@
                     </div>
 
                 <div class="col">
-                    <img src="img/editar.png" alt="" srcset="">
-                    <img src="img/Borrar.png" alt="" srcset="">
+                    
+                    <img src="../img/Borrar.png" alt="" srcset="">
                    
                 </div>
                 
-                <div class="filaM ">
-                    <div class="col">
-                        <p>1</p>
-                    </div>
-
-                    
-                    <div class="col">
-                        <p>Alfonso Parker</p>
-                    </div>
-
-                <div class="col">
-                    <img src="img/editar.png" alt="" srcset="">
-                    <img src="img/Borrar.png" alt="" srcset="">
-                   
-                </div>
+             
 
             
                 
@@ -89,6 +75,8 @@
         </center>
     </section>
 
-    <script src="js/controlador.js"></script>
+    <script src="/js/controlador-editarMotoristas.js"></script>
+    <script src="/js/controladorWeb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
