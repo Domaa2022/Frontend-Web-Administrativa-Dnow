@@ -5,6 +5,11 @@ function mostrarAsignacion() {
 
 function quitarAsignacion() {
     document.getElementById('contenedor-asignacion').style.display = "none";
+    document.getElementById('contenedor-asignacion-ocupado').style.display = "none";
+}
+
+function mostrarAsignacionOcupado(){
+    document.getElementById('contenedor-asignacion-ocupado').style.display = "block";
 }
 
 idMotorista = JSON.parse(sessionStorage.getItem('idMotorista'))
@@ -47,6 +52,71 @@ function llenarLista(){
 }
 
 llenarLista();
+
+function asignarMotoristaOrden() {
+
+    axios ( {
+        url :'http://localhost:3000/motoristas',
+        method : 'get',
+        responseType : 'json'
+    } ).then( res => {
+
+        let x = res.data;
+        console.log(res.data)
+        document.getElementById('ordenesDisponibles').innerHTML = '';
+
+        for ( let i = 0 ; i < x.length ; i++ ) {
+            
+            for(let j = 0 ; j < x[i].motoristas.length ; j++){
+           
+             x[i].motoristas[j].estado == 'Ocupado'
+                         
+            }
+        }   
+
+    }).catch( err => {
+        console.log(err);
+    })
+
+    document.getElementById('cbz').innerHTML += `  
+     <img src="../img/campanita.png" id="editar" alt="" srcset="">
+    `
+
+    document.getElementById('pz').style.display = "none";
+    
+}
+
+function admitirMotorista() {
+
+    axios ( {
+        url :'http://localhost:3000/motoristas',
+        method : 'get',
+        responseType : 'json'
+    } ).then( res => {
+
+        let x = res.data;
+        console.log(res.data)
+        document.getElementById('ordenesDisponibles').innerHTML = '';
+
+        for ( let i = 0 ; i < x.length ; i++ ) {
+            
+            for(let j = 0 ; j < x[i].motoristas.length ; j++){
+                
+            
+                  x[i].motoristas[j].estado == 'Disponible'
+                     
+                    
+                
+            }
+        }   
+
+    }).catch( err => {
+        console.log(err);
+    })
+}
+
+
+
 
 
 

@@ -140,3 +140,9 @@ html, body{
     outline: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+#editar{
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+}
