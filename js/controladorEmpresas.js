@@ -1,3 +1,8 @@
+function mostrarPaginaPrincipal(){
+    window.location.href = "../html/webAdministrativa.html"
+}
+
+
 function generarCategorias(){
     axios({
 		url : 'http://localhost:3000/categorias',

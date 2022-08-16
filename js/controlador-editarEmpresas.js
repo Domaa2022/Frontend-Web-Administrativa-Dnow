@@ -22,7 +22,7 @@ function llenarTabla(){
     
                     <div class="col">
                         <img src="../img/editar.png" alt="" onclick= "moverEditar(${i})" srcset="">
-                        <img src="../img/Borrar.png" alt="" srcset="" onclick = eliminar(${i})>
+                        <img src="../img/Borrar.png" alt="" srcset="" onclick = eliminarCategoria(${i})>
                     
                     </div>
         `
@@ -39,7 +39,7 @@ function moverEditar(indiceEmpresa){
     document.getElementById('editarPrincipal').style.display = 'none';
     document.getElementById('editarEmpresa').style.display = 'block';
     axios({
-        url : 'http://localhost:3000/administradores/' + categoria._id,
+        url : 'http://localhost:3000/categorias/' + categoria._id,
         method : 'GET',
         ResponseType : 'json'
     }).then(res =>{
@@ -51,11 +51,12 @@ function moverEditar(indiceEmpresa){
         const formData = new FormData(e.currentTarget);
         axios({
             method: 'put',
-            url: 'http://localhost:3000/administradores/' + categoria._id +'/'+ x,
+            url: 'http://localhost:3000/categorias/' + categoria._id +'/'+ x,
             data: formData,
             ResponseType: 'json'
         }).then(res => {
             console.log(res.data)
+            alert('Empresa editada correctamente');
         }
         ).catch(err => {
             console.log(err)
@@ -68,13 +69,14 @@ function moverEditar(indiceEmpresa){
     
 }
 
-function eliminar(indiceEmpresa){
+function eliminarCategoria(indiceEmpresa){
     axios({
-        url : 'http://localhost:3000/administradores/' + categoria._id +'/'+ indiceEmpresa,
+        url : 'http://localhost:3000/categorias/' + categoria._id +'/'+ indiceEmpresa,
         method : 'delete',
         ResponseType : 'json'
     }).then(res =>{
         console.log(res.data)
+        alert('Empresa eliminada correctamente');
         llenarTabla();
     }).catch(err =>{
         console.log(err);

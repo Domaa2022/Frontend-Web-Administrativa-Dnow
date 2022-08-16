@@ -12,6 +12,7 @@ form.addEventListener('submit', e => {
         data: formData
     }).then(res => {
         console.log(res.data)
+        alert('Empresa agregada correctamente');
     }).catch(err => {
         console.log(err)
     })

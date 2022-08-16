@@ -14,8 +14,13 @@ form.addEventListener('submit', e => {
         data: formData
     }).then(res => {
         console.log(res.data)
+        alert('Producto agregado correctamente');
     }
     ).catch(err => {
         console.log(err)
     })
 })
+
+function mostrarPaginaPrincipal(){
+    window.location.href = '../html/administrarEmpresa.html'
+}

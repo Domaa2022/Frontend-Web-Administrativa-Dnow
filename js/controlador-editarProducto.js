@@ -64,6 +64,7 @@ function moverEditar(i){
     })
     .then(res =>{
         console.log(res.data)
+        alert('Producto editado correctamente');
     })
     .catch(err =>{
         console.log(err);
@@ -84,4 +85,14 @@ function eliminar(indiceProducto){
         console.log(err);
     }
     )
+}
+
+function mostrarEditarPrincipal(){
+    document.getElementById('editarEmpresa').style.display = 'none'
+    document.getElementById('editarPrincipal').style.display = 'block'
+
+}
+
+function mostrarPaginaPrincipal(){
+    window.location.href = '../html/administrarEmpresa.html'
 }
