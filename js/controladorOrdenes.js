@@ -30,3 +30,8 @@ function mostrarOrdenes () {
 }
 
 mostrarOrdenes();
+
+
+function mostrarPaginaPrincipal(){
+    window.location.href = "../html/webAdministrativa.html"
+}

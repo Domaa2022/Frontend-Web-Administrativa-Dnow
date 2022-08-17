@@ -24,7 +24,7 @@ function llenarTabla(){
                         <img src="../img/editar.png" alt="" onclick= "moverEditar(${i})" srcset="">
                         <img src="../img/Borrar.png" alt="" srcset="" onclick = eliminarCategoria(${i})>
                     
-                    </div>
+        </div>
         `
             
         }

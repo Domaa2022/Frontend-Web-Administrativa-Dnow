@@ -27,3 +27,7 @@ function dirigirIndex(){
 function dirigirIndex(){
     window.location.href = "index.html";
 }
+
+function mostrarPaginaPrincipal(){
+    window.location.href = "../html/webAdministrativa.html"
+}

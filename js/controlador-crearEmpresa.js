@@ -22,3 +22,4 @@ form.addEventListener('submit', e => {
 function mostrarPaginaPrincipal(){
     window.location.href = '../html/administrarEmpresa.html'
 }
+
